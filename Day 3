@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class dist
+{
+   public:
+   int feet,inch;
+   dist(){  }
+   dist (int x,int y)
+   {
+      feet=x;
+      inch =y;
+   }
+   dist (float m,float n)
+   {
+      feet=m;
+      inch=n;
+   }
+   void display()
+   {
+      cout<<“Resulted distance is: “;
+      cout<<feet<<” feet “<<inch<<” inch\n”;
+   }
+   void sum(dist obj1,dist obj2)
+   {
+      feet=obj1.feet+obj2.feet;
+      inch=obj1.inch+obj2.inch;
+      if(inch>=12)
+      {
+         feet=feet+1;
+         inch=inch-12;
+      }
+   }
+   ~dist()
+   {
+      cout<<“object deleted:\n”;
+   }
+};
+int main()
+{
+   dist obj1(8,9),obj2(4.0f,7.3f),obj3;
+   obj3.sum(obj1,obj2);
+   obj3.display();
+}
