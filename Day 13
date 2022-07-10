@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+    A()
+    {
+        cout <<"constructor A"<<endl;
+    }
+    A(const A &obj)
+    {
+        cout <<"copy constructor A"<<endl;
+    }
+};
+class B: virtual A
+{
+public:
+    B()
+    {
+        cout <<"constructor B"<<endl;
+    }
+    B(const B & obj)
+    {
+        cout<<"copy constructor B"<<endl;
+    }
+};
+class C: virtual A
+{
+public:
+    C()
+    {
+        cout<<"constructor C"<<endl;
+    }
+    C(const C & obj)
+    {
+        cout <<"copy constructor C" <<endl;
+    }
+};
+class D:B,C
+{
+public:
+    D()
+    {
+        cout<<"constructor D" <<endl;
+    }
+    D(const D & obj)
+    {
+        cout <<"copy constructor D" <<endl;
+    }
+};
+int main()
+{
+    D obj1;
+    cout  <<endl <<"Now Creating Obj2" <<endl;
+    D obj2(obj1);
+}
