@@ -1,0 +1,150 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+class student
+
+{
+
+  protected:
+
+      int roll_no;
+
+  public:
+
+      void getdata(int a)
+
+      {
+
+      roll_no=a;
+
+      }
+
+      void putdata(void)
+
+      {
+
+      cout<<"\n  roll_number: "<      }
+
+};
+
+
+
+class test:public student
+
+{
+
+  protected:
+
+     float part1,part2;
+
+  public:
+
+     void get_mark(float p,float q)
+
+     {
+
+     part1=p;
+
+     part2=q;
+
+     }
+
+     void put_mark(void)
+
+     {
+
+     cout<<"\n  marks obtained ";
+
+     cout<<"\n  mark1: "<     cout<<"\n  mark2: "<     }
+
+};
+
+class sport
+
+{
+
+  protected:
+
+     float scores;
+
+  public:
+
+     void get_scores(float s)
+
+     {
+
+     scores=s;
+
+     }
+
+     void put_scores(void)
+
+     {
+
+     cout<<"\n point: "<     }
+
+};
+
+class result:public test,public sport
+
+{
+
+   private:
+
+     float total;
+
+   public:
+
+     void display()
+
+     {
+
+     total=part1+part2+scores;
+
+     put_mark();
+
+     putdata();
+
+{
+
+   private:
+
+     float total;
+
+   public:
+
+     void display()
+
+     {
+
+     total=part1+part2+scores;
+
+     put_mark();
+
+cout<<"\n  total is: "<     }
+
+};
+
+
+
+void main()
+
+{
+
+  clrscr();
+
+  result r;
+
+  r.getdata(31);
+
+  r.get_mark(50,50);
+
+  r.get_scores(50);
+
+  r.display();
+
+  getch();
+
+}
+     putdata();
